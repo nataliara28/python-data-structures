@@ -29,3 +29,42 @@ del student["major"]
 # Update math grade
 student["math_grade"] = 95
 print(student)
+
+
+# Nested Dictionary
+company = {
+    "Engineering": {
+        "Backend Team": {
+            "Alice": {"role": "Senior Engineer", "age": 30},
+            "Bob": {"role": "Junior Engineer", "age": 25}
+        },
+        "Frontend Team": {
+            "Carol": {"role": "Lead Engineer", "age": 32},
+            "Dave": {"role": "Engineer", "age": 27}
+        }
+    },
+    "HR": {
+        "Recruitment Team": {
+            "Eve": {"role": "Recruiter", "age": 28},
+            "Frank": {"role": "Recruitment Assistant", "age": 24}
+        },
+        "Employee Relations Team": {
+            "Grace": {"role": "Manager", "age": 35}
+        }
+    }
+}
+
+
+# Get Alice's role
+
+
+# Get Grace's age
+
+
+# List all departments
+
+
+# List all teams in Engineering
+
+
+# Loop through all employees and their roles in the company
