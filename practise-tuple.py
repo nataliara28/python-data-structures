@@ -23,27 +23,45 @@ print(coordinates[1])
 
 
 
+
 # Initial tuple
 my_tuple = (1, 2, 3, 4, 5)
 print(my_tuple)
 
 
+
 # Iterating through a tuple (looping through elements)
-
+for item in my_tuple:
+    print(item)
     
-
+for item, index in enumerate(my_tuple):
+    print(f"Index {index}: {item}")
+    
+    
 # Nested tuples 
 nested_tuple = (1, 2, (3, 4, 5), (6, 7, 8))
 
 # Accessing the third element
-
+print(nested_tuple[2])
 
 # accessing the second element inside the nested tuple, 4
+print(nested_tuple[2][1])
 
+# accessing the second element inside the nested tuple, 8
+print(nested_tuple[3][2])
+print(nested_tuple[-1][-1])
 
 
 # Outer loop to iterate through each element in the top-level tuple
+nested_tuple = (1, 2, (3, 4, 5), (6, 7, 8))
 
-
-
-
+for element in nested_tuple:
+    # check if the element is a tuple itself 
+    if type(element) is tuple: # is this true?
+        print("Nested tuple found: ")
+        # Inner loop to iterate through the nested tuple
+        for inner_element in element:
+            print(f'    Inner element: {inner_element}')
+    else:
+        # Print the non-tuple elements
+        print(f"Outer element: {element}")
