@@ -56,15 +56,25 @@ company = {
 
 
 # Get Alice's role
+print(company["Engineering"]['Backend Team']['Alice']['role'] )
 
 
 # Get Grace's age
+print(company["HR"]["Employee Relations Team"]['Grace']['age'])
 
 
 # List all departments
+print(company.keys())
 
 
 # List all teams in Engineering
+print(company["Engineering"].keys())
 
 
 # Loop through all employees and their roles in the company
+for department, teams in company.items():
+    print(f"Department: {department}")
+    for team, members in teams.items():
+        print(f"    Team: {team}")
+        for employee, details in members.items():
+            print(f'        {employee} - Role: {details['role']}')
